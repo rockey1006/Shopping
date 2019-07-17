@@ -1,0 +1,32 @@
+<div class = "thumbnail">
+    <img src="assets/images/{{product.picture}}" width="500" height="600">
+    <div class ="caption">
+
+        <h4>
+          <span class="label label-primary">
+            Brand: {{product.brand}}
+          </span>
+        </h4>
+        <h3>
+          <span class="label label-primary">
+            Model: {{product.model}}
+          </span>
+        </h3>
+        <h4>
+          <span class="label label-primary">
+            Price: {{product.price | currency:'PLN' : true}}
+          </span>
+        </h4>
+        <h3>
+          <div>
+              <button class="btn btn-success" (click)= "addToCart()">Details</button>
+          </div>
+          <div>
+              <input #amount placeholder="amount" />
+              <button style="margin:5px;" class="btn btn-success" (click)= "addToCart(amount.value)">Add to cart</button>
+          </div>
+        </h3>
+    </div>
+  </div>
+
+  
